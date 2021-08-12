@@ -1,0 +1,117 @@
+
+// baseVariable
+$mainColor:  #DF4242;
+$blackColor: #333;
+$grayColor: #a4a4a4;
+
+$maxWidth: 500px;
+
+
+// 不同像素比手机使用不同背景图片
+// $url: 图片路径
+@mixin bg-image($url) {
+	background-image: url($url + "@2x.png");
+    background-repeat: no-repeat;
+	@media (-webkit-min-device-pixel-ratio: 3),(min-device-pixel-ratio: 3) {
+		background-image: url($url + "@3x.png");
+	}	
+}
+@mixin bg-image-jpg($url) {
+	background-image: url($url + "@2x.jpg");
+    background-repeat: no-repeat;
+	@media (-webkit-min-device-pixel-ratio: 3),(min-device-pixel-ratio: 3) {
+		background-image: url($url + "@3x.jpg");
+	}	
+}
+
+
+// 为PC端 retina屏幕使用2倍图
+// $url: 图片路径
+@mixin bgImage-pc($url) {
+    background-image: url($url + ".png");
+    background-repeat: no-repeat;
+    @media (-webkit-min-device-pixel-ratio: 2),(min-device-pixel-ratio: 2) {
+        background-image: url($url + "@2x.png");
+    }   
+}
+@mixin bgImage-pc-jpg($url) {
+    background-image: url($url + ".jpg");
+    background-repeat: no-repeat;
+    @media (-webkit-min-device-pixel-ratio: 2),(min-device-pixel-ratio: 2) {
+        background-image: url($url + "@2x.jpg");
+    }   
+}
+
+// 一像素边框
+@mixin bb-1px ($color) {
+    position: relative;
+    &::after{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        content: '';
+        display: block;
+        width: 100%;
+        border-bottom: 1px solid $color;
+        transform: scaleY(0.5);
+        transform-origin: 0 100%;
+    }
+}
+@mixin bt-1px ($color) {
+    position: relative;
+    &::before{
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: '';
+        display: block;
+        width: 100%;
+        border-top: 1px solid $color;
+        transform: scaleY(0.5);
+        transform-origin: 0 0;
+    }
+}
+
+@mixin bRadius-1px ($color, $radius) {
+    position: relative;
+    &::after {
+        content: '';
+        width: 200%;
+        height: 200%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border: 1px solid $color;
+        border-radius: $radius*2;
+        transform: scale(0.5,0.5);
+        transform-origin: top left;
+    }
+}
+
+// 箭头
+@mixin arrow-right ($color, $size: 0.1rem) {
+  box-sizing: border-box;
+  position: absolute;
+  right: -0.16rem;
+  top: 50%;
+  display: inline-block;
+  width: $size;
+  height: $size;
+  margin-top: -$size / 2;
+  border-top: solid 1px $color;
+  border-right: solid 1px $color;
+  transform: rotate(45deg);
+}
+@mixin arrow-bottom ($color, $size: 0.1rem) {
+  box-sizing: border-box;
+  position: absolute;
+  right: -0.2rem;
+  top: 50%;
+  display: inline-block;
+  width: $size;
+  height: $size;
+  margin-top: -$size / 2;
+  border-top: solid 1px $color;
+  border-right: solid 1px $color;
+  transform: rotate(135deg);
+}

@@ -1,0 +1,20 @@
+/***************************
+		tools
+***************************/
+.clearfix:after{
+	content:".";
+	display:block;
+	height:0;
+	clear:both;
+	visibility:hidden;
+}
+
+.text-hidden-one {
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+}
+
+.font-smoothing {
+	-webkit-font-smoothing: antialiased;
+}

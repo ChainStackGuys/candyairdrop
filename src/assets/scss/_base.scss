@@ -1,0 +1,32 @@
+// css reset
+@import './reset';
+
+// tools
+@import './tools';
+
+/***************************
+      自定义基本样式
+***************************/
+input, textarea, select, button {
+  -webkit-tap-highlight-color:rgba(0,0,0,0);
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  appearance: none;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background-color: transparent;
+  &::-webkit-input-placeholder { /* WebKit browsers */
+      color: #ccc6c0;
+  }
+  &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+      color: #ccc6c0;
+  }
+  &::-moz-placeholder { /* Mozilla Firefox 19+ */
+      color: #ccc6c0;
+  }
+  &:-ms-input-placeholder { /* Internet Explorer 10+ */
+      color: #ccc6c0;
+  }
+}

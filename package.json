@@ -1,0 +1,52 @@
+{
+  "name": "prize",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "serve-staging": "vue-cli-service serve --mode stagingServe",
+    "build": "vue-cli-service build",
+    "build-staging": "vue-cli-service build --mode staging",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "@opengsn/gsn": "^2.1.0",
+    "@walletconnect/web3-provider": "^1.3.5",
+    "axios": "^0.19.2",
+    "bcvwallet": "^2.0.0",
+    "clipboard": "^2.0.6",
+    "core-js": "^3.6.4",
+    "dayjs": "^1.8.23",
+    "mint-ui": "^2.2.13",
+    "numeral": "^2.0.6",
+    "throttle-debounce": "^2.1.0",
+    "typescript-eslint": "^0.0.1-alpha.0",
+    "vue": "^2.6.11",
+    "vue-clipboard2": "^0.3.1",
+    "vue-i18n": "^8.16.0",
+    "vue-qr": "^2.2.1",
+    "vue-router": "^3.1.5",
+    "vuex": "^3.1.2",
+    "web3": "^1.3.4"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.2.0",
+    "@vue/cli-plugin-eslint": "~4.2.0",
+    "@vue/cli-plugin-router": "~4.2.0",
+    "@vue/cli-plugin-vuex": "~4.2.0",
+    "@vue/cli-service": "~4.2.0",
+    "@vue/eslint-config-standard": "^5.1.0",
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.7.2",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "eslint-plugin-vue": "^6.1.2",
+    "node-sass": "^4.12.0",
+    "sass-loader": "^8.0.2",
+    "style-resources-loader": "^1.3.2",
+    "vue-cli-plugin-style-resources-loader": "~0.1.4",
+    "vue-template-compiler": "^2.6.11"
+  }
+}
